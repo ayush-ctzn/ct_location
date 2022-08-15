@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="getLocation">Get Location</button>
+</body>
+<!-- <script src="./clevertap.js"></script> -->
+<script type="text/javascript">
+  var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
+  clevertap.account.push({ id: '48K-W44-556Z' }, 'sk1');
+  clevertap.privacy.push({ optOut: false });
+  clevertap.privacy.push({ useIP: false });
+  // window.clevertap = clevertap
+  (function () {
+    var wzrk = document.createElement('script');
+    wzrk.type = 'text/javascript';
+    wzrk.async = true;
+    // wzrk.src = "https://cdn.jsdelivr.net/gh/CleverTap/clevertap-web-sdk@c2cbb454642baad50f66993d922c11e98b35455b/clevertap.min.js"
+    wzrk.src = "./clevertap.js"
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wzrk, s);
+  })();
+</script>
+<script type="text/javascript">
+  let elem = document.getElementById("getLocation")
+  elem.addEventListener("click", function getLocation() {
+    console.log(clevertap.getCleverTapID())
+    clevertap.getLocation((res => console.log(res)), (err => console.log(err)))
+  })
+</script>
+
+</html>
