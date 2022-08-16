@@ -5494,6 +5494,7 @@
 
           if (lng <= -180 || lng > 180) {
             console.log('A valid longitude must range between -180 and 180');
+            return;
           }
 
           this.sendMultiValueData({
