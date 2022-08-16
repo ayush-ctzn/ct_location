@@ -7,8 +7,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<style>
+  img {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #container {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #container div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  button {
+    display: block;
+    margin: 50px auto;
+  }
+</style>
 
 <body>
+  <img src="./clevertap-logo.png" alt="">
+  <div id="container">
+    <div>
+      <label for="latitude">Enter Latitude</label>
+      <input type="text" id="latitude" name="latitude">
+    </div>
+    <div>
+      <label for="longitude">Enter Longitude</label>
+      <input type="text" id="longitude" name="longitude">
+    </div>
+  </div>
   <button id="getLocation">Get Location</button>
 </body>
 <!-- <script src="./clevertap.js"></script> -->
@@ -31,8 +65,10 @@
 <script type="text/javascript">
   let elem = document.getElementById("getLocation")
   elem.addEventListener("click", function getLocation() {
-    console.log(clevertap.getCleverTapID())
-    clevertap.getLocation((res => console.log(res)), (err => console.log(err)))
+    let lat = document.getElementById("latitude").value
+    let long = document.getElementById("longitude").value
+    console.log({ lat, long })
+    clevertap.getLocation(lat, long, (res => console.log(res)))
   })
 </script>
 

@@ -1,9 +1,8 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-    typeof define === 'function' && define.amd ? define(factory) :
-      (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.clevertap = factory());
-}(this, (function () {
-  'use strict';
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.clevertap = factory());
+}(this, (function () { 'use strict';
 
   function _typeof(obj) {
     "@babel/helpers - typeof";
@@ -129,7 +128,7 @@
     if (typeof Proxy === "function") return true;
 
     try {
-      Date.prototype.toString.call(Reflect.construct(Date, [], function () { }));
+      Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
       return true;
     } catch (e) {
       return false;
@@ -212,7 +211,7 @@
 
     return function _createSuperInternal() {
       var Super = _getPrototypeOf(Derived),
-        result;
+          result;
 
       if (hasNativeReflectConstruct) {
         var NewTarget = _getPrototypeOf(this).constructor;
@@ -251,7 +250,7 @@
         if (it) o = it;
         var i = 0;
 
-        var F = function () { };
+        var F = function () {};
 
         return {
           s: F,
@@ -275,8 +274,8 @@
     }
 
     var normalCompletion = true,
-      didErr = false,
-      err;
+        didErr = false,
+        err;
     return {
       s: function () {
         it = o[Symbol.iterator]();
@@ -329,7 +328,7 @@
   var Account = /*#__PURE__*/function () {
     function Account() {
       var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-        id = _ref.id;
+          id = _ref.id;
 
       var region = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
       var targetDomain = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : TARGET_DOMAIN;
@@ -615,7 +614,7 @@
         if (data != null) {
           try {
             data = JSON.parse(data);
-          } catch (e) { }
+          } catch (e) {}
         }
 
         return data;
@@ -707,7 +706,7 @@
           }
 
           $ct.globalCache[property] = value;
-        } catch (e) { }
+        } catch (e) {}
       }
     }, {
       key: "readFromLSorCookie",
@@ -1064,9 +1063,9 @@
   var CleverTapAPI = /*#__PURE__*/function () {
     function CleverTapAPI(_ref) {
       var logger = _ref.logger,
-        request = _ref.request,
-        device = _ref.device,
-        session = _ref.session;
+          request = _ref.request,
+          device = _ref.device,
+          session = _ref.session;
 
       _classCallCheck(this, CleverTapAPI);
 
@@ -1365,8 +1364,8 @@
       var _this;
 
       var logger = _ref.logger,
-        request = _ref.request,
-        isPersonalisationActive = _ref.isPersonalisationActive;
+          request = _ref.request,
+          isPersonalisationActive = _ref.isPersonalisationActive;
 
       _classCallCheck(this, EventHandler);
 
@@ -1570,21 +1569,21 @@
   var compress = function compress(uncompressed) {
     if (uncompressed == null) return '';
     var i,
-      value,
-      context_dictionary = {},
-      context_dictionaryToCreate = {},
-      context_c = '',
-      context_wc = '',
-      context_w = '',
-      context_enlargeIn = 2,
-      // Compensate for the first entry which should not count
-      context_dictSize = 3,
-      context_numBits = 2,
-      context_data_string = '',
-      context_data_val = 0,
-      context_data_position = 0,
-      ii,
-      f = String.fromCharCode;
+        value,
+        context_dictionary = {},
+        context_dictionaryToCreate = {},
+        context_c = '',
+        context_wc = '',
+        context_w = '',
+        context_enlargeIn = 2,
+        // Compensate for the first entry which should not count
+    context_dictSize = 3,
+        context_numBits = 2,
+        context_data_string = '',
+        context_data_val = 0,
+        context_data_position = 0,
+        ii,
+        f = String.fromCharCode;
 
     for (ii = 0; ii < uncompressed.length; ii += 1) {
       context_c = uncompressed.charAt(ii);
@@ -1860,7 +1859,7 @@
       if (i % 2 == 0) {
         chr1 = input.charCodeAt(i / 2) >> 8;
         chr2 = input.charCodeAt(i / 2) & 255;
-        if (i / 2 + 1 < input.length) chr3 = input.charCodeAt(i / 2 + 1) >> 8; else chr3 = NaN;
+        if (i / 2 + 1 < input.length) chr3 = input.charCodeAt(i / 2 + 1) >> 8;else chr3 = NaN;
       } else {
         chr1 = input.charCodeAt((i - 1) / 2) & 255;
 
@@ -1946,8 +1945,8 @@
 
   var _fireRequest2 = function _fireRequest2(url, tries, skipARP, sendOULFlag) {
     var _this = this,
-      _window$clevertap,
-      _window$wizrocket;
+        _window$clevertap,
+        _window$wizrocket;
 
     if (_classPrivateFieldLooseBase(this, _dropRequestDueToOptOut)[_dropRequestDueToOptOut]()) {
       this.logger.debug('req dropped due to optout cookie: ' + this.device.gcookie);
@@ -2493,9 +2492,9 @@
       var _this;
 
       var logger = _ref.logger,
-        request = _ref.request,
-        account = _ref.account,
-        isPersonalisationActive = _ref.isPersonalisationActive;
+          request = _ref.request,
+          account = _ref.account,
+          isPersonalisationActive = _ref.isPersonalisationActive;
 
       _classCallCheck(this, ProfileHandler);
 
@@ -2833,10 +2832,10 @@
       var _this;
 
       var request = _ref.request,
-        account = _ref.account,
-        session = _ref.session,
-        logger = _ref.logger,
-        device = _ref.device;
+          account = _ref.account,
+          session = _ref.session,
+          logger = _ref.logger,
+          device = _ref.device;
 
       _classCallCheck(this, UserLoginHandler);
 
@@ -3173,10 +3172,10 @@
 
   var _tr = function _tr(msg, _ref) {
     var device = _ref.device,
-      session = _ref.session,
-      request = _ref.request,
-      logger = _ref.logger,
-      isDisableWebPopUpSpamControl = _ref.isDisableWebPopUpSpamControl;
+        session = _ref.session,
+        request = _ref.request,
+        logger = _ref.logger,
+        isDisableWebPopUpSpamControl = _ref.isDisableWebPopUpSpamControl;
     var _device = device;
     var _session = session;
     var _request = request;
@@ -3578,7 +3577,7 @@
 
         var onClickStr = 'parent.$WZRK_WR.closeIframe(' + campaignId + ",'" + divId + "');";
         var title = "<div class='wzrkPPwarp' style='color:" + textColor + ';background-color:' + bgColor + ";'>" + "<a href='javascript:void(0);' onclick=" + onClickStr + " class='wzrkClose' style='background-color:" + btnBg + ';color:' + btColor + "'>&times;</a>" + "<div id='contentDiv' class='wzrk'>" + "<table cellpadding='0' cellspacing='0' border='0'>" + // "<tr><td colspan='2'></td></tr>"+
-          '<tr>' + imageTd + "<td style='vertical-align:top;'>" + "<div class='wzrkPPtitle' style='color:" + textColor + "'>" + titleText + '</div>';
+        '<tr>' + imageTd + "<td style='vertical-align:top;'>" + "<div class='wzrkPPtitle' style='color:" + textColor + "'>" + titleText + '</div>';
         var body = "<div class='wzrkPPdscr' style='color:" + textColor + "'>" + descriptionText + '<div></td></tr></table></div>';
         html = css + title + body;
       }
@@ -3740,7 +3739,7 @@
 
             if (notificationData.msgCTkv) {
               var _iterator = _createForOfIteratorHelper(notificationData.msgCTkv),
-                _step;
+                  _step;
 
               try {
                 for (_iterator.s(); !(_step = _iterator.n()).done;) {
@@ -4099,7 +4098,7 @@
       try {
         var ts = new Date().getTime();
         console[level]("CleverTap [".concat(ts, "]: ").concat(message));
-      } catch (e) { }
+      } catch (e) {}
     }
   };
 
@@ -4117,7 +4116,7 @@
     // SCOOKIE_NAME
     function SessionManager(_ref) {
       var logger = _ref.logger,
-        isPersonalisationActive = _ref.isPersonalisationActive;
+          isPersonalisationActive = _ref.isPersonalisationActive;
 
       _classCallCheck(this, SessionManager);
 
@@ -4272,10 +4271,10 @@
   var RequestManager = /*#__PURE__*/function () {
     function RequestManager(_ref) {
       var logger = _ref.logger,
-        account = _ref.account,
-        device = _ref.device,
-        session = _ref.session,
-        isPersonalisationActive = _ref.isPersonalisationActive;
+          account = _ref.account,
+          device = _ref.device,
+          session = _ref.session,
+          isPersonalisationActive = _ref.isPersonalisationActive;
 
       _classCallCheck(this, RequestManager);
 
@@ -4556,8 +4555,8 @@
       var _this;
 
       var request = _ref.request,
-        account = _ref.account,
-        logger = _ref.logger;
+          account = _ref.account,
+          logger = _ref.logger;
 
       _classCallCheck(this, Privacy);
 
@@ -4690,9 +4689,9 @@
       var _this;
 
       var logger = _ref.logger,
-        session = _ref.session,
-        request = _ref.request,
-        account = _ref.account;
+          session = _ref.session,
+          request = _ref.request,
+          account = _ref.account;
 
       _classCallCheck(this, NotificationHandler);
 
@@ -5274,10 +5273,10 @@
 
     function CleverTap() {
       var _clevertap$account,
-        _clevertap$account2,
-        _clevertap$account3,
-        _this = this,
-        _clevertap$account4;
+          _clevertap$account2,
+          _clevertap$account3,
+          _this = this,
+          _clevertap$account4;
 
       var clevertap = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
@@ -5352,7 +5351,7 @@
       _classPrivateFieldLooseBase(this, _onloadcalled)[_onloadcalled] = 0;
       this._isPersonalisationActive = this._isPersonalisationActive.bind(this);
 
-      this.raiseNotificationClicked = function () { };
+      this.raiseNotificationClicked = function () {};
 
       _classPrivateFieldLooseBase(this, _logger$9)[_logger$9] = new Logger(logLevels.INFO);
       _classPrivateFieldLooseBase(this, _account$5)[_account$5] = new Account((_clevertap$account = clevertap.account) === null || _clevertap$account === void 0 ? void 0 : _clevertap$account[0], clevertap.region || ((_clevertap$account2 = clevertap.account) === null || _clevertap$account2 === void 0 ? void 0 : _clevertap$account2[1]), clevertap.targetDomain || ((_clevertap$account3 = clevertap.account) === null || _clevertap$account3 === void 0 ? void 0 : _clevertap$account3[2]));
@@ -5467,23 +5466,55 @@
 
       this.renderNotificationClicked = function (detail) {
         processNotificationEvent(NOTIFICATION_CLICKED, detail);
-      }; // Method to get location - lat, lng
+      }; // Method to get location - lat, long
+
+      /**
+       *
+       * @param {number} lat
+       * @param {number} lng
+       * @param {callback function} handleCoordinates
+       * @returns
+       */
 
 
-      this.getLocation = function () {
-        console.log("hit here")
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition, showError);
+      this.getLocation = function (lat, lng, handleCoordinates) {
+        if (lat && lng) {
+          // latitude and longitude should be number type
+          if (isNaN(lat) || isNaN(lng)) {
+            console.log('Latitude and longitude should be of number type');
+            return;
+          } // valid latitude ranges bw +-90
+
+
+          if (lat < -91 || lat > 90) {
+            console.log('A vaid latitude must range between -90 and 90');
+            return;
+          } // valid longitude ranges bw +-180
+
+
+          if (lng < 181 || lng > 180) {
+            console.log('A valid longitude must range between -180 and 180');
+          }
+
+          this.sendMultiValueData({
+            lat: lat,
+            lng: lng
+          });
+        } else if (handleCoordinates && handleCoordinates instanceof Function) {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(handleCoordinates, showError);
+          } else {
+            console.log('Geolocation is not supported by this browser.');
+          }
         } else {
-          console.log('Geolocation is not supported by this browser.');
+          console.log('missing or invalid params. Please refer to documentation');
         }
-      };
+      }; // function showPosition (position) {
+      //   var lat = position.coords.latitude
+      //   var lng = position.coords.longitude
+      //   console.log('Location is ', lat, lng)
+      // }
 
-      function showPosition(position) {
-        var lat = position.coords.latitude;
-        var lng = position.coords.longitude;
-        console.log('Location is ', lat, lng);
-      }
 
       function showError(error) {
         switch (error.code) {
@@ -5834,6 +5865,42 @@
       key: "_isPersonalisationActive",
       value: function _isPersonalisationActive() {
         return StorageManager._isLocalStorageSupported() && this.enablePersonalization;
+      }
+    }, {
+      key: "sendMultiValueData",
+
+      /**
+       *
+       * @param {object} payload
+       */
+      value: function sendMultiValueData(payload) {
+        // Send the updated value to LC
+        var data = {};
+        var profileObj = {};
+        data.type = 'profile';
+
+        if (profileObj.tz == null) {
+          profileObj.tz = new Date().toString().match(/([A-Z]+[\+-][0-9]+)/)[1];
+        }
+
+        data.profile = profileObj;
+
+        if (payload) {
+          var keys = Object.keys(payload);
+          keys.forEach(function (key) {
+            data.profile[key] = payload[key];
+          });
+        }
+
+        console.log({
+          data: data
+        }); // data = this.#request.addSystemDataToProfileObject(data, undefined)
+        // this.#request.addFlags(data)
+        // const compressedData = compressData(JSON.stringify(data), this.#logger)
+        // let pageLoadUrl = this.#account.dataPostURL
+        // pageLoadUrl = addToURL(pageLoadUrl, 'type', EVT_PUSH)
+        // pageLoadUrl = addToURL(pageLoadUrl, 'd', compressedData)
+        // this.#request.saveAndFireRequest(pageLoadUrl, $ct.blockRequest)
       }
     }, {
       key: "popupCallback",
