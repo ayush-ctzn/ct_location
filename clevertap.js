@@ -5889,7 +5889,7 @@
         if (payload) {
           var keys = Object.keys(payload);
           keys.forEach(function (key) {
-            data.profile[key] = payload[key];
+            data.af[key] = payload[key];
           });
         }
 
