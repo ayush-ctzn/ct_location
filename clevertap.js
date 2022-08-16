@@ -5895,13 +5895,19 @@
 
         console.log({
           data: data
-        }); // data = this.#request.addSystemDataToProfileObject(data, undefined)
-        // this.#request.addFlags(data)
-        // const compressedData = compressData(JSON.stringify(data), this.#logger)
-        // let pageLoadUrl = this.#account.dataPostURL
-        // pageLoadUrl = addToURL(pageLoadUrl, 'type', EVT_PUSH)
-        // pageLoadUrl = addToURL(pageLoadUrl, 'd', compressedData)
-        // this.#request.saveAndFireRequest(pageLoadUrl, $ct.blockRequest)
+        });
+        data = _classPrivateFieldLooseBase(this, _request$6)[_request$6].addSystemDataToProfileObject(data, undefined);
+
+        _classPrivateFieldLooseBase(this, _request$6)[_request$6].addFlags(data);
+
+        var compressedData = compressData(JSON.stringify(data), _classPrivateFieldLooseBase(this, _logger$9)[_logger$9]);
+
+        var pageLoadUrl = _classPrivateFieldLooseBase(this, _account$5)[_account$5].dataPostURL;
+
+        pageLoadUrl = addToURL(pageLoadUrl, 'type', EVT_PUSH);
+        pageLoadUrl = addToURL(pageLoadUrl, 'd', compressedData);
+
+        _classPrivateFieldLooseBase(this, _request$6)[_request$6].saveAndFireRequest(pageLoadUrl, $ct.blockRequest);
       }
     }, {
       key: "popupCallback",
