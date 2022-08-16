@@ -5486,13 +5486,13 @@
           } // valid latitude ranges bw +-90
 
 
-          if (lat < -91 || lat > 90) {
+          if (lat <= -90 || lat > 90) {
             console.log('A vaid latitude must range between -90 and 90');
             return;
           } // valid longitude ranges bw +-180
 
 
-          if (lng < 181 || lng > 180) {
+          if (lng <= -180 || lng > 180) {
             console.log('A valid longitude must range between -180 and 180');
           }
 
