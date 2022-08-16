@@ -5877,6 +5877,7 @@
       value: function sendMultiValueData(payload) {
         // Send the updated value to LC
         var data = {};
+        data.af = {};
         var profileObj = {};
         data.type = 'profile';
 
